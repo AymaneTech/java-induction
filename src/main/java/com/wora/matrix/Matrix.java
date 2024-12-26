@@ -1,6 +1,10 @@
 package com.wora.matrix;
 
 public class Matrix {
+    private Matrix() {
+
+    }
+
     public static int[][] add(int[][] m1, int[][] m2) {
         if (m1.length != m2.length
                 || m1[0].length != m2[0].length) {
@@ -15,4 +19,16 @@ public class Matrix {
         }
         return result;
     }
+
+    public static int[][] scalarMultiply(int[][] matrix, int scalar) {
+        int[][] result = new int[matrix.length][matrix[0].length];
+
+        for (int r = 0; r < matrix.length; r++) {
+            for (int c = 0; c < matrix[0].length; c++) {
+                result[r][c] = matrix[r][c] * scalar;
+            }
+        }
+        return result;
+    }
+
 }

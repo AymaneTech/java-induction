@@ -1,6 +1,5 @@
 package com.wora.matrix;
 
-import jdk.jshell.SourceCodeAnalysis;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -33,8 +32,8 @@ class MatrixTest {
 
         assertEquals(m1.length, actual.length);
         assertEquals(1, actual[0][0]);
-        assertEquals(8,actual[1][0]);
-        assertEquals(6,actual[0][2]);
+        assertEquals(8, actual[1][0]);
+        assertEquals(6, actual[0][2]);
     }
 
 
@@ -54,6 +53,24 @@ class MatrixTest {
         assertEquals(10, actual[1][2]);
     }
 
+    @Test
+    void givenMatrix_whenTranspose_thenProduceNewMatrix() {
+        int[][] matrix = {
+                {1, 2, 3},
+                {0, -6, 7}
+        };
 
+        int[][] expected = {
+                {1, 0},
+                {2, -6},
+                {3, 7}
+        };
 
+        int[][] actual = Matrix.transpose(matrix);
+
+        assertEquals(expected.length, actual.length);
+        assertEquals(expected[0].length, actual[0].length);
+        assertEquals(expected[0][0], actual[0][0]);
+        assertEquals(expected[1][1], actual[1][1]);
+    }
 }

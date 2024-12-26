@@ -15,7 +15,7 @@ class TwoMatrixSumTest {
     }
 
     @Test
-    void givenTwoMatrixWithDifferentSize_whenAdd_thenThrowMatrixSizeNotEqual() {
+    void givenMatricesWithDifferentSize_whenAdd_thenThrowIllegalArgumentException() {
         int[][] m1 = new int[2][3];
         int[][] m2 = new int[2][4];
 
@@ -25,7 +25,7 @@ class TwoMatrixSumTest {
     }
 
     @Test
-    void givenValidMatrix_whenAdd_thenShouldReturnNewMatrixWithSum() {
+    void givenValidMatrices_whenAdd_thenShouldReturnNewMatrixWithSum() {
         int[][] m1 = {
                 {1, 3, 1},
                 {1, 0, 0}

@@ -1,6 +1,6 @@
 package com.wora.matrix;
 
-public class TwoMatrixSum {
+class TwoMatrixSum {
 
     public int[][] add(int[][] m1, int[][] m2) {
         if (isMatrixLengthValid(m1, m2))

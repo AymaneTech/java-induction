@@ -1,6 +1,6 @@
 package com.wora.matrix;
 
-public class ScalarMultiplication {
+class ScalarMultiplication {
 
     public int[][] scalarMultiply(int[][] matrix, int scalar) {
         int[][] result = new int[matrix.length][matrix[0].length];

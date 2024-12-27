@@ -1,7 +1,7 @@
-package com.wora.ds;
+package com.wora.stack;
 
-import com.wora.ds.exception.StackOverflow;
-import com.wora.ds.exception.StackUnderflow;
+import com.wora.stack.exception.StackOverflow;
+import com.wora.stack.exception.StackUnderflow;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

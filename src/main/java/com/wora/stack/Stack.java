@@ -1,4 +1,4 @@
-package com.wora.ds;
+package com.wora.stack;
 
 public interface Stack<T> {
     void push(T item);

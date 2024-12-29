@@ -12,7 +12,7 @@ public class Main {
             if (source == null)
                 break;
 
-            final Processor processor = new Processor(source);
+            final Processor processor = new Processor(source, SCANNER);
             System.out.println(processor.evaluate());
 
         }

@@ -6,16 +6,19 @@ import java.util.Scanner;
 import java.util.Stack;
 
 public class Processor {
+    private static final Map<String, Double> variables = new HashMap<>();
     private final Stack<Double> operands = new Stack<>();
     private final Stack<OperationToken> operations = new Stack<>();
-    private final Map<String, Double> variables = new HashMap<>();
     private final String equation;
+
+    private final Scanner scanner;
 
     private int current;
     private int start;
 
-    public Processor(String equation) {
+    public Processor(String equation, Scanner scanner) {
         this.equation = equation;
+        this.scanner = scanner;
     }
 
     public double evaluate() {
@@ -103,10 +106,9 @@ public class Processor {
 
         String variableName = equation.substring(start, current);
         if (!variables.containsKey(variableName)) {
-            Scanner scanner = new Scanner(System.in);
-
             System.out.print("Please enter variableName " + variableName + " value :  ");
             double variableValue = scanner.nextDouble();
+            
             variables.put(variableName, variableValue);
         }
         operands.push(variables.get(variableName));

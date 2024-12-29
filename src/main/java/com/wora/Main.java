@@ -1,14 +1,15 @@
 package com.wora;
 
-
-import com.wora.queue.ArrayQueue;
-import com.wora.queue.LinkedListQueue;
-import com.wora.queue.Queue;
+import com.wora.binarytree.BinaryTree;
+import com.wora.binarytree.DefaultBinaryTree;
 
 public class Main {
-    double area;
-
     public static void main(String[] args) {
+        BinaryTree tree = new DefaultBinaryTree();
+
+        tree.accept(8);
+
+        System.out.println(tree.accept(3));
     }
 
 }

@@ -108,7 +108,7 @@ public class Processor {
         if (!variables.containsKey(variableName)) {
             System.out.print("Please enter variableName " + variableName + " value :  ");
             double variableValue = scanner.nextDouble();
-            
+
             variables.put(variableName, variableValue);
         }
         operands.push(variables.get(variableName));
